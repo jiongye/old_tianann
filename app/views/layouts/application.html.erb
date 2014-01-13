@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<%= render "/refinery/html_tag" %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <head>
+    <%= render "/refinery/head" %>
+  </head>
+  <body id="<%= canonical_id @page %>">
+    <%= site_bar -%>
+    <div id="page_container">
+      <div id="container-inner">
+        <div id="header">
+          <%= render "/refinery/header" -%>
+        </div>
+        <section id="page">
+          <%= yield %>
+        </section>
+      </div>
+    </div>
+    <div id='footer'>
+      <%= render "/refinery/footer" -%>
+    </div>
+    <%= render "/refinery/javascripts" %>
+  </body>
+</html>
