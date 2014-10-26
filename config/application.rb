@@ -66,5 +66,7 @@ module Tianann
     config.assets.version = '1.0'
 
     config.assets.initialize_on_precompile = true
+
+    config.sass.preferred_syntax = :sass
   end
 end

@@ -1,7 +1,7 @@
-<div class = "row">
+<div class = "sitemap">
 <% @pages.live.each do |page| %>
    <% if page.show_in_menu %>
-   <ul>
+   <ul class='parent'>
      <li>
         <%= link_to page.title, refinery.url_for(page.url_marketable) %>
         <%if page.children.any? %>
