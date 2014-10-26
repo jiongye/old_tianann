@@ -3,7 +3,7 @@
    <% if page.show_in_menu %>
    <ul class='parent'>
      <li>
-        <%= link_to page.title, refinery.url_for(page.url_marketable) %>
+        <%= link_to page.title, refinery.url_for(page.url) %>
         <%if page.children.any? %>
              <%= render :partial => 'page', locals: {:page_children => page} %>
         <% end %>
