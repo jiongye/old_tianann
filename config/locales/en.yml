@@ -9,3 +9,24 @@ en:
   other_activities: "Other Activities"
   sitename: "Tian Ann Temple"
   copyright: "Copyright"
+
+  activerecord:
+    models:
+      refinery/inquiries/inquiry: inquiry
+    attributes:
+      refinery/inquiries/inquiry:
+        name: Name
+        email: Email
+        phone: Phone
+        message: Message
+        subject: Subject
+
+  refinery:
+    inquiries:
+      admin:
+        inquiries:
+          index:
+            no_inquiries: You have not received any inquiries yet.
+            no_spam: Hooray! You don't have any spam.
+          show:
+            subject: Subject

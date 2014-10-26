@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141009140912) do
+ActiveRecord::Schema.define(:version => 20141020030404) do
 
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20141009140912) do
     t.boolean  "spam",       :default => false
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
+    t.string   "subject"
   end
 
   add_index "refinery_inquiries_inquiries", ["id"], :name => "index_refinery_inquiries_inquiries_on_id"
