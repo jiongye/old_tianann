@@ -8,17 +8,17 @@
     <%= site_bar -%>
     <div id="page_container">
       <div id="container-inner">
-        <div id="header">
+        <header id="header">
           <%= render "/refinery/header" -%>
-        </div>
+        </header>
         <section id="page">
           <%= yield %>
         </section>
       </div>
     </div>
-    <div id='footer'>
+    <footer id='footer'>
       <%= render "/refinery/footer" -%>
-    </div>
+    </footer>
     <%= render "/refinery/javascripts" %>
   </body>
 </html>
