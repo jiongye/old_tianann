@@ -61,6 +61,7 @@ h3
 
 #page
   clear: both
+  margin-top: 20px
 
 
 /*----------- Header -----------------*/
@@ -74,7 +75,7 @@ h3
 
     a
       font-family: Georgia, "Times New Roman", Times, serif
-      color: #90DA11
+      color: #f9692a
       font-size: 30px
       font-weight: normal
       text-decoration: none
@@ -109,7 +110,6 @@ h3
 #menu
   height: 40px
   width: 920px
-  background-color: #3B7A24
 
   ul
     list-style: none
@@ -123,7 +123,7 @@ h3
       padding: 0
 
       a
-        color: #fff
+        color: #000
         display: block
         font-size: 14px
         padding: 12px 20px
@@ -131,16 +131,21 @@ h3
         text-transform: uppercase
 
         &:hover
-          background: #45d836
           color: #fff
+          background-color: #f9692a
 
       &.selected
-        background: #f9692a
+        a
+          color: #f9692a
+        &:hover
+          a
+            color: #fff
+          background-color: #f9692a
 
   li
     ul
       display: none
-      background-color: #000
+      background-color: #f9692a
 
     &:hover, &.hover
       ul
@@ -153,7 +158,7 @@ h3
         float: none
 
         a
-          background-color: #000
+          background-color: #f9692a
           color: #fff
 
 
