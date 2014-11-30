@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.cycle.all.min
 //= require_tree .
 
 $('#locale a').click(function(){
@@ -38,3 +39,15 @@ $('.image_url').click(function(){
   location.href = "/" + locale + url;
   return false;
 })
+
+$('#slideshow').cycle({
+    fx:     'fade',
+    speed:  'slow',
+    timeout: 3000,
+    pager:  '#slider_nav',
+    pause: true,
+    pagerAnchorBuilder: function(idx, slide) {
+        // return sel string for existing anchor
+        return '#slider_nav li:eq(' + (idx) + ') a';
+    }
+});

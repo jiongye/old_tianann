@@ -14,3 +14,7 @@
  *= require_tree .
  */
 
+.slide-separator {
+ clear: both;
+ margin-bottom: 30px;
+}

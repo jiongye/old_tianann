@@ -195,7 +195,69 @@ h3
       display: block
       float: right
 
+/*----------- Slideshow -----------------*/
+#slider
+  padding: 0
+  margin: 0 auto
+  width: 960px
+  height: 400px
+  flaot: left
 
+  #slideshow
+    float: left
+    margin: 0 0 10px 0
+    height: 100%
+    width: 100%
+
+  .controls-outer
+    margin-left: auto
+    margin-right: auto
+    float: left
+
+    #slide_controls
+      float: right
+      padding: 0
+      position: relative
+      margin: 0
+      z-index: 1000
+      width: 960px
+
+      ul
+        margin: 0 auto
+        padding: 0
+        width: 200px
+        height: 20px
+
+        li
+          margin: 0
+          padding: 0
+          list-style: none
+          float: left
+          display: block
+          a
+            width: 14px
+            height: 14px
+            background-image: image-url('tabs_2.gif')
+            background-repeat: no-repeat
+            background-position: center center
+            display: block
+            float: left
+            padding: 2px
+            margin: 2px !important
+            margin: 1px 1px
+            outline: none
+
+            &:focus
+              outline: none
+            &:hover
+              background-image: image-url('tabs_1.gif')
+              background-repeat: no-repeat
+              background-position: center center
+
+          a.activeSlide
+            background-image: image-url('tabs_1.gif')
+            background-repeat: no-repeat
+            background-position: center center
 
 
 

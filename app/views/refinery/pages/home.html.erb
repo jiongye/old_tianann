@@ -1,1 +1,27 @@
+<% content_for :images do %>
+  <div id="slider">
+    <!-- start slideshow -->
+    <div id="slideshow">
+      <% @page.images.each do |image| %>
+        <div class="slide-image">
+          <%= image_tag(image.thumbnail(geometry: "960x400#c").url) %>
+        </div>
+      <% end %>
+    </div>
+    <!-- end #slideshow -->
+    <div class="controls-outer">
+      <div id="slide_controls">
+        <ul id="slider_nav">
+          <% @page.images.each do |image| %>
+            <li><a href="#"></a></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <div class="clr"></div>
+  </div>
+  <!--/slider -->
+  <div class="slide-separator"></div>
+<% end %>
+
 <%= render '/refinery/content_page' %>
