@@ -12,42 +12,46 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.lightbox
 //= require jquery.cycle.all.min
 //= require_tree .
 
-$('#locale a').click(function(){
-  var locale = $(this).attr("href");
-  var pathname = location.pathname;
-  if(pathname == "/"){
-    location.href = locale;
-  }else if(pathname.match(/^\/(zh-TW|en)/) != null){
-    pathname = pathname.replace(/^\/(zh-TW|en)/, locale);
-    location.href = pathname + location.search;
-  }else{
-    pathname = locale + pathname;
-    location.href = pathname + location.search;
-  }
+$(document).ready(function(){
 
-  return false
-})
-
-$("#email").html("<a href='mailto:webmaster@tiananntemple.org'>webmaster@tiananntemple.org</a>")
-
-$('.image_url').click(function(){
-  var locale = $('#locale_value').data("value");
-  var url = $(this).attr("href");
-  location.href = "/" + locale + url;
-  return false;
-})
-
-$('#slideshow').cycle({
-    fx:     'fade',
-    speed:  'slow',
-    timeout: 3000,
-    pager:  '#slider_nav',
-    pause: true,
-    pagerAnchorBuilder: function(idx, slide) {
-        // return sel string for existing anchor
-        return '#slider_nav li:eq(' + (idx) + ') a';
+  $('#locale a').click(function(){
+    var locale = $(this).attr("href");
+    var pathname = location.pathname;
+    if(pathname == "/"){
+      location.href = locale;
+    }else if(pathname.match(/^\/(zh-TW|en)/) != null){
+      pathname = pathname.replace(/^\/(zh-TW|en)/, locale);
+      location.href = pathname + location.search;
+    }else{
+      pathname = locale + pathname;
+      location.href = pathname + location.search;
     }
+
+    return false
+  })
+
+
+  $('.image_url').click(function(){
+    var locale = $('#locale_value').data("value");
+    var url = $(this).attr("href");
+    location.href = "/" + locale + url;
+    return false;
+  })
+
+  $('#slideshow').cycle({
+      fx:     'fade',
+      speed:  'slow',
+      timeout: 3000,
+      pager:  '#slider_nav',
+      pause: true,
+      pagerAnchorBuilder: function(idx, slide) {
+          // return sel string for existing anchor
+          return '#slider_nav li:eq(' + (idx) + ') a';
+      }
+  });
+
 });

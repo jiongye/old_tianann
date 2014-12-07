@@ -116,17 +116,20 @@ h3
 #menu
   height: 40px
   width: 960px
+  z-index: 1000
 
   ul
     list-style: none
     padding: 0 10px
     margin: 0
     height: 40px
+    z-index: 1000
 
     li
       float: left
       display: block
       padding: 0
+      z-index: 1000
 
       a
         color: #000
@@ -148,9 +151,11 @@ h3
           background-color: #f9692a
 
   li
+    z-index: 1000
     ul
       display: none
       background-color: #f9692a
+      z-index: 1000
 
     &:hover, &.hover
       ul
@@ -158,9 +163,11 @@ h3
         position: absolute
         margin: 0
         padding: 0
+        z-index: 1000
 
       li
         float: none
+        z-index: 1000
 
         a
           background-color: #f9692a
@@ -219,7 +226,6 @@ h3
       padding: 0
       position: relative
       margin: 0
-      z-index: 1000
       width: 960px
 
       ul

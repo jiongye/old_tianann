@@ -15,6 +15,12 @@
  */
 
 .slide-separator {
- clear: both;
- margin-bottom: 30px;
+  clear: both;
+  margin-bottom: 30px;
+}
+
+#gallery .gallery_item {
+  float: left;
+  width: 100px;
+  height: 100px;
 }
