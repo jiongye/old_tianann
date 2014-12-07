@@ -5,17 +5,25 @@
 
 #body, #body2
   margin: 10px
-  float: left
-  width: 650px
+  float: right
+  width: 500px
 
-#body2
-  clear: left
-
-#side_body2
+#body2, #side_body2
   clear: right
 
-#side_body, #side_body2, #body, #body2
+#side_body, #side_body2, #body, #body2, #left_nav
   padding-top: 40px
   background-image: image-url('section_separator.png')
   background-repeat: repeat-x
   background-position: 0px 0px
+
+#left_nav
+  float: left
+  width: 190px
+  margin-top: 10px
+
+#home
+  #body, #body2
+    width: 650px
+    clear: left
+    float: left
