@@ -1,11 +1,11 @@
 <% page_children.children.live.each do |children_page|%>
   <% next unless children_page.show_in_menu? %>
   <ul class='children'>
-  <li class="<%= @page == children_page ? 'selected' : '' %>">
-    <%= link_to children_page.title, refinery.url_for(children_page.url) %>
-    <%if children_page.children.any?%>
-        <%= render :partial => 'shared/page', locals: {:page_children => children_page} %>
-    <%-end %>
-  </li>
-</ul>
+    <li class="<%= @page == children_page ? 'selected' : '' %>">
+      <%= link_to children_page.title, refinery.url_for(children_page.url) %>
+      <%if children_page.children.any?%>
+          <%= render :partial => 'sitemaps/page', locals: {:page_children => children_page} %>
+      <%-end %>
+    </li>
+  </ul>
 <%end%>
