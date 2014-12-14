@@ -11,19 +11,46 @@
 #side_body2
   clear: right
 
-#side_body, #side_body2, #body, #body2, #left_nav
+#side_body, #side_body2, #body, #body2
   padding-top: 40px
   background-image: image-url('section_separator.png')
   background-repeat: repeat-x
   background-position: 0px 0px
-
-#left_nav
-  float: left
-  width: 190px
-  margin-top: 10px
 
 #home
   #body, #body2
     width: 650px
     clear: left
     float: left
+
+#left_nav
+  float: left
+  width: 190px
+  margin-top: 10px
+
+  ul
+    list-style: none
+    padding: 0 10px
+    margin: 0
+
+    li
+      padding: 5px
+
+      a
+        color: #000
+        display: block
+        font-size: 14px
+        text-decoration: none
+
+        &:hover
+          color: #fff
+          background-color: #f9692a
+
+      &.selected
+        a
+          color: #f9692a
+        &:hover
+          a
+            color: #fff
+          background-color: #f9692a
+

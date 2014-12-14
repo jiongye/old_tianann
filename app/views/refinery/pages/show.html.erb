@@ -1,4 +1,8 @@
 <%= render '/refinery/images' %>
 
+<div id='left_nav'>
+  <%= render :partial => 'sitemaps/page', locals: {:page_children => @page.parent ? @page.parent : @page} %>
+</div>
+
 <%= render '/refinery/content_page' %>
 
