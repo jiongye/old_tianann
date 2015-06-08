@@ -3,9 +3,12 @@
     <div id="slider">
       <!-- start slideshow -->
       <div id="slideshow">
-        <% @page.images.each do |image| %>
+        <% @page.images.each_with_index do |image, index| %>
           <div class="slide-image">
             <%= image_tag(image.thumbnail(geometry: "960x400#c").url) %>
+            <div class='slide-caption'>
+              <%=raw @page.caption_for_image_index(index) %>
+            </div>
           </div>
         <% end %>
       </div>
