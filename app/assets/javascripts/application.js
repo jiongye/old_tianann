@@ -45,7 +45,7 @@ $(document).ready(function(){
   $('#slideshow').cycle({
       fx:     'fade',
       speed:  'slow',
-      timeout: 5000,
+      timeout: 3000,
       pager:  '#slider_nav',
       pause: true,
       pagerAnchorBuilder: function(idx, slide) {
