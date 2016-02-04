@@ -1,4 +1,4 @@
-<% if @page.images.any? %>
+<% unless @page.images.blank? %>
   <% content_for :images do %>
     <div id="slider">
       <!-- start slideshow -->
